@@ -1,0 +1,5 @@
+name: amazon-basic-cluster
+isFolder: false
+packageType: clusterdeployment
+templateType: ["managedcluster","managementcluster"]
+cloudServiceProvider: amazon

@@ -1,0 +1,41 @@
+{
+    "cloudServiceProvider": "amazon",
+    "clusterConfig": {
+        "vpcConfigRequest": {
+            "securityGroupIds": [
+                "sg-05d7280cc488308e2"
+            ],
+            "subnetIds": [
+                "subnet-079d7eb10cab06e29",
+                "subnet-0adeda74164988f64",
+                "subnet-068bcf31409a8b3b8"
+            ]
+        },
+        "createClusterInput": {
+            "name": "basic-aws",
+            "roleArn": "arn:aws:iam:::role/gripo-new-cluster-role",
+            "version": "1.29"
+        },
+        "nodegroup": {
+            "clusterName": "basic-aws",
+            "instanceTypes": [
+                "t3.medium"
+            ],
+            "nodeRole": "arn:aws:iam:::role/gripo-new-workernode",
+            "nodegroupName": "node-group-basic-aws",
+            "subnets": [
+                "subnet-079d7eb10cab06e29",
+                "subnet-0adeda74164988f64",
+                "subnet-068bcf31409a8b3b8"
+            ],
+            "version": "1.29",
+            "scalingConfig": {
+                "desiredSize": 2,
+                "maxSize": 4,
+                "minSize": 2
+            }
+        },
+        "region": "eu-west-2",
+        "credentialRef": "aws-secret-new"
+    }
+}

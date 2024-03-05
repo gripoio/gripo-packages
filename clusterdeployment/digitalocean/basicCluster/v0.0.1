@@ -1,0 +1,18 @@
+{
+    "cloudServiceProvider": "digitalocean",
+    "clusterConfig": {
+        "credentialRef": "digital-ocean-secret",
+        "createClusterRequest": {
+            "name": "docluster",
+            "region": "lon1",
+            "version": "1.29.1-do.0",
+            "node_pools": [
+                {
+                    "name": "node-group-docluster",
+                    "count": 1,
+                    "size": "s-2vcpu-2gb"
+                }
+            ]
+        }
+    }
+}

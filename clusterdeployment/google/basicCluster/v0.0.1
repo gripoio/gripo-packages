@@ -1,0 +1,113 @@
+{
+    "cloudServiceProvider": "google",
+    "clusterConfig": {
+        "credentialRef": "gke-secret",
+        "createClusterRequest": {
+            "cluster": {
+                "name": "gke-basic",
+                "masterAuth": {
+                    "clientCertificateConfig": {}
+                },
+                "network": "projects/reflected-wind-372422/global/networks/default",
+                "addonsConfig": {
+                    "httpLoadBalancing": {},
+                    "horizontalPodAutoscaling": {},
+                    "kubernetesDashboard": {
+                        "disabled": true
+                    },
+                    "dnsCacheConfig": {},
+                    "gcePersistentDiskCsiDriverConfig": {
+                        "enabled": true
+                    }
+                },
+                "subnetwork": "projects//regions/us-east1/subnetworks/default",
+                "nodePools": [
+                    {
+                        "name": "gke-basic-nodepool",
+                        "config": {
+                            "machineType": "e2-small",
+                            "diskSizeGb": 100,
+                            "oauthScopes": [
+                                "https://www.googleapis.com/auth/devstorage.read_only",
+                                "https://www.googleapis.com/auth/logging.write",
+                                "https://www.googleapis.com/auth/monitoring",
+                                "https://www.googleapis.com/auth/servicecontrol",
+                                "https://www.googleapis.com/auth/service.management.readonly",
+                                "https://www.googleapis.com/auth/trace.append"
+                            ],
+                            "metadata": {
+                                "disable-legacy-endpoints": "true"
+                            },
+                            "imageType": "COS_CONTAINERD",
+                            "diskType": "pd-balanced",
+                            "shieldedInstanceConfig": {
+                                "enableIntegrityMonitoring": true
+                            }
+                        },
+                        "initialNodeCount": 1,
+                        "autoscaling": {},
+                        "management": {
+                            "autoUpgrade": true,
+                            "autoRepair": true
+                        },
+                        "networkConfig": {},
+                        "upgradeSettings": {
+                            "maxSurge": 1,
+                            "strategy": "SURGE"
+                        }
+                    }
+                ],
+                "locations": [
+                    "us-east1-c"
+                ],
+                "networkPolicy": {},
+                "ipAllocationPolicy": {
+                    "useIpAliases": true,
+                    "stackType": "IPV4"
+                },
+                "masterAuthorizedNetworksConfig": {},
+                "binaryAuthorization": {
+                    "evaluationMode": "DISABLED"
+                },
+                "autoscaling": {},
+                "networkConfig": {
+                    "datapathProvider": "LEGACY_DATAPATH"
+                },
+                "defaultMaxPodsConstraint": {
+                    "maxPodsPerNode": "110"
+                },
+                "authenticatorGroupsConfig": {},
+                "databaseEncryption": {
+                    "state": "DECRYPTED"
+                },
+                "shieldedNodes": {
+                    "enabled": true
+                },
+                "releaseChannel": {
+                    "channel": "REGULAR"
+                },
+                "notificationConfig": {
+                    "pubsub": {}
+                },
+                "initialClusterVersion": "1.29",
+                "location": "us-east1-c",
+                "loggingConfig": {
+                    "componentConfig": {
+                        "enableComponents": [
+                            "SYSTEM_COMPONENTS",
+                            "WORKLOADS"
+                        ]
+                    }
+                },
+                "monitoringConfig": {
+                    "componentConfig": {
+                        "enableComponents": [
+                            "SYSTEM_COMPONENTS"
+                        ]
+                    },
+                    "managedPrometheusConfig": {}
+                }
+            }
+        }
+    }
+}

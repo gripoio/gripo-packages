@@ -1,0 +1,5 @@
+name: cluster-template-basic
+isFolder: false
+packageType: clusterdeployment
+templateType: ["workloadcluster"]
+cloudServiceProvider: azure

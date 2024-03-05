@@ -1,0 +1,29 @@
+{
+    "cloudServiceProvider": "azure",
+    "clusterConfig": {
+        "name": "basiccluster",
+        "credentialRef": "azure-secret",
+        "resourceGroup": {
+            "name": "DefaultResourceGroup-EUS"
+        },
+        "managedCluster": {
+            "name": "basiccluster",
+            "location": "eastus",
+            "properties": {
+                "dnsPrefix": "basiccluster",
+                "agentPoolProfiles": [
+                    {
+                        "name": "agentpool",
+                        "count": 1,
+                        "vmSize": "Standard_DS2_v2",
+                        "mode": "System"
+                    }
+                ],
+                "servicePrincipalProfile": {
+                    "clientId": "",
+                    "secret": ""
+                }
+            }
+        }
+    }
+}

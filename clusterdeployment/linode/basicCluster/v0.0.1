@@ -1,0 +1,17 @@
+{
+    "cloudServiceProvider": "linode",
+    "clusterConfig": {
+        "credentialRef": "linode-secret-gripo",
+        "createClusterRequest": {
+            "label": "basic-cluter",
+            "k8s_version": "1.28",
+            "region": "ca-central",
+            "node_pools": [
+                {
+                    "type": "g6-standard-2",
+                    "count": 1
+                }
+            ]
+        }
+    }
+}

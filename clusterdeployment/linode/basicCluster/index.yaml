@@ -1,0 +1,5 @@
+name: linode-basic-cluster
+isFolder: false
+packageType: clusterdeployment
+templateType: ["managedcluster","managementcluster"]
+cloudServiceProvider: linode

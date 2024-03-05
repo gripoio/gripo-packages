@@ -1,0 +1,5 @@
+name: azure-basic-cluster
+isFolder: false
+packageType: clusterdeployment
+templateType: ["managedcluster","managementcluster"]
+cloudServiceProvider: azure
