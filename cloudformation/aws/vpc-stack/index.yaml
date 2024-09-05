@@ -1,5 +1,5 @@
 name: cloudformation-vpc-stack
 isFolder: false
-packageType: template
-templateType: ["cloudformation"]
+packageType: cloudformation
+templateType: ["service"]
 cloudServiceProvider: amazon

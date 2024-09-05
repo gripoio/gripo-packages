@@ -1,5 +1,0 @@
-name: cloudformation-vpc-setting
-isFolder: false
-packageType: setting
-templateType: ["cloudformation"]
-cloudServiceProvider: amazon
